@@ -9,23 +9,28 @@ class Z5 extends React.Component {
                 { title: 'Марвел 5', year: '2003', desc: 'Описание' },
 ],
     }
+    delLine = () =>{
+
+    }
     renderList =() =>{
         return this.state.arr.map((item) =>
             <tr className='tab' >
                 <td className='tab'>{item.title}</td>
                 <td className='tab'>{item.year}</td>
                 <td className='tab'>{item.desc}</td>
+                <td> <button onClick={this.delLine}>удалить</button> </td>
             </tr>
         )
     }
     render() {
+        let keys = Object.keys(this.state.arr[0]);
         return (
             <div>
                 <table className='tab'>
                     <tr className='tab' >
-                        <th className='tab'>name</th>
-                        <th className='tab'>yers</th>
-                        <th className='tab'>desc</th>
+                        <th className='tab'>{keys[0]}</th>
+                        <th className='tab'>{keys[1]}</th>
+                        <th className='tab'>{keys[2]}</th>
                     </tr>
                 {this.renderList()}
                 </table>
