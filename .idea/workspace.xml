@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05eff779-fab7-4492-b2a8-934d0c463bdc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/counter.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/z4.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/z5.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/zadanee1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/zadanee1.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/zadanie2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/zadanie2.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,12 @@
       <workItem from="1675460818085" duration="2459000" />
       <workItem from="1675751288732" duration="5394000" />
       <workItem from="1675759717912" duration="6552000" />
-      <workItem from="1676027847810" duration="1154000" />
+      <workItem from="1676027847810" duration="2641000" />
+      <workItem from="1676378347155" duration="596000" />
+      <workItem from="1676467716740" duration="557000" />
+      <workItem from="1676523900843" duration="11712000" />
+      <workItem from="1676665462595" duration="2784000" />
+      <workItem from="1676699073688" duration="990000" />
     </task>
     <servers />
   </component>

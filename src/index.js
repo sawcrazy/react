@@ -9,14 +9,17 @@ import Test from "./test"
 import Zadanee1 from "./components/zadanee1";
 import Zadanie2 from "./components/zadanie2";
 import "./components/style.css"
+import Zadan3 from "./components/zadan3";
+import Z4 from "./components/z4";
+import Z5 from "./components/z5";
 
 
 
 const App = () => {
     return (
         <div>
-            <Zadanie2/>
-            <Zadanee1/>
+
+            <Z5/>
         </div>
 
         )

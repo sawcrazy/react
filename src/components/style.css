@@ -13,3 +13,7 @@
     display: flex;
 
 }
+.tab{
+    border: 1px solid darkgreen;
+    text-align: center;
+}
