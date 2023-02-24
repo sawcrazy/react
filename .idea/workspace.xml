@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05eff779-fab7-4492-b2a8-934d0c463bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/z4.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/z5.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/z5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/z5.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +69,7 @@
       <workItem from="1676523900843" duration="11712000" />
       <workItem from="1676665462595" duration="2784000" />
       <workItem from="1676699073688" duration="990000" />
+      <workItem from="1677240448631" duration="326000" />
     </task>
     <servers />
   </component>

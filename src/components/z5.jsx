@@ -11,10 +11,10 @@ class Z5 extends React.Component {
     }
     renderList =() =>{
         return this.state.arr.map((item) =>
-            <tr>
-                <td>{item.title}</td>
-                <td>{item.year}</td>
-                <td>{item.desc}</td>
+            <tr className='tab' >
+                <td className='tab'>{item.title}</td>
+                <td className='tab'>{item.year}</td>
+                <td className='tab'>{item.desc}</td>
             </tr>
         )
     }
@@ -22,10 +22,10 @@ class Z5 extends React.Component {
         return (
             <div>
                 <table className='tab'>
-                    <tr>
-                        <th>name</th>
-                        <th>yers</th>
-                        <th>desc</th>
+                    <tr className='tab' >
+                        <th className='tab'>name</th>
+                        <th className='tab'>yers</th>
+                        <th className='tab'>desc</th>
                     </tr>
                 {this.renderList()}
                 </table>

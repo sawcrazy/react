@@ -15,5 +15,5 @@
 }
 .tab{
     border: 1px solid darkgreen;
-    text-align: center;
+    border-spacing: 0;
 }
