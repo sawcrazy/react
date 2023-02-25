@@ -4,23 +4,27 @@ import React from "react";
 class Z5 extends React.Component {
 
     state={
-        arr:[{ title: 'Марвел 1', year: '2001', desc: 'Описание' },
-                { title: 'Batman', year: '2005', desc: 'Описание' },
-                { title: 'Марвел 5', year: '2003', desc: 'Описание' },
+        arr:[{ title: 'Марвел 1', year: '2001', desc: 'Описание',id: 1 },
+                { title: 'Batman', year: '2005', desc: 'Описание' , id: 2},
+                { title: 'Марвел 5', year: '2003', desc: 'Описание', id: 3 },
+
 ],
     }
-    delLine = () =>{
+    delLine = (id) =>{
+        const delLine = this.state.arr.filter((item) => item.id !== id);
+        this.setState({arr: delLine})
 
     }
     renderList =() =>{
         return this.state.arr.map((item) =>
-            <tr className='tab' >
+            <tr key={item.id} className='tab' >
                 <td className='tab'>{item.title}</td>
                 <td className='tab'>{item.year}</td>
                 <td className='tab'>{item.desc}</td>
-                <td> <button onClick={this.delLine}>удалить</button> </td>
+                <td> <button onClick={()=> this.delLine(item.id)}>удалить</button> </td>
             </tr>
         )
+
     }
     render() {
         let keys = Object.keys(this.state.arr[0]);
@@ -39,5 +43,18 @@ class Z5 extends React.Component {
         );
     }
 }
+function reducer(state,action) {
+    let arr = [...state];
+    if(action.type === 'ADD'){
+        // arr.push(action.payload)
+        return [...state,action.payload];
+    }
+    return arr
+
+}
+console.log(reducer([4], { type: 'ADD', payload: 5 }))
 
 export default Z5;
+
+
+

@@ -19,10 +19,10 @@ class Z4 extends React.Component{
             this.setState({list: newList})
     }
     addElement =() =>{
-        let num = +(this.state.input2);
-        let newList = this.state.list.slice()
-        newList.push(num)
-        this.setState({list: newList})
+    //     let num = +(this.state.input2);
+    //     let newList = [...this.state.list]
+    //     newList.push(num)
+        this.setState({list: [...this.state.list,+this.state.input2]})
     }
     renderList = () =>{
         return this.state.list.map((item) => <div className='box'>{item}</div>)
