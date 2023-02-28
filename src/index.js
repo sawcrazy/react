@@ -18,7 +18,6 @@ import Z5 from "./components/z5";
 const App = () => {
     return (
         <div>
-            <Counter/>
             <Z5/>
         </div>
 

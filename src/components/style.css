@@ -13,7 +13,7 @@
     display: flex;
 
 }
-.tab{
+table,td,tr,th{
     border: 1px solid darkgreen;
     border-spacing: 0;
 }

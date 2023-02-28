@@ -15,44 +15,67 @@ class Z5 extends React.Component {
         this.setState({arr: delLine})
 
     }
+
     renderList =() =>{
-        return this.state.arr.map((item) =>
-            <tr key={item.id} className='tab' >
-                <td className='tab'>{item.title}</td>
-                <td className='tab'>{item.year}</td>
-                <td className='tab'>{item.desc}</td>
-                <td> <button onClick={()=> this.delLine(item.id)}>удалить</button> </td>
-            </tr>
-        )
+
+       let val = this.state.arr.map((item) =>{
+           return  Object.values(item)
+        })
+      return   val.map((item) => {
+         return <tr>
+              {item.map((item) => {
+                   return <td>{item}</td>
+
+
+              })}
+             <td> <button onClick={() =>{this.delLine(item)}}>удалить</button> </td>
+          </tr>
+        })
+        console.log(val)
+
+    }
+    renderThead = () => {
+        return Object.keys(this.state.arr[0]).map((item) => {
+            return (<th>
+                {item}
+            </th>)
+        })
 
     }
     render() {
-        let keys = Object.keys(this.state.arr[0]);
+
         return (
             <div>
-                <table className='tab'>
-                    <tr className='tab' >
-                        <th className='tab'>{keys[0]}</th>
-                        <th className='tab'>{keys[1]}</th>
-                        <th className='tab'>{keys[2]}</th>
+                <table>
+                    <thead>
+                    <tr>
+                        {this.renderThead()}
+                        <th>кнопка</th>
                     </tr>
-                {this.renderList()}
+                    </thead>
+                    <tbody>
+                    {this.renderList()}
+
+                    </tbody>
                 </table>
+                <div>
+                    <button onClick={this.renderList}>logi</button>
+                </div>
 
             </div>
         );
     }
 }
-function reducer(state,action) {
-    let arr = [...state];
-    if(action.type === 'ADD'){
-        // arr.push(action.payload)
-        return [...state,action.payload];
-    }
-    return arr
-
-}
-console.log(reducer([4], { type: 'ADD', payload: 5 }))
+// function reducer(state,action) {
+//     let arr = [...state];
+//     if(action.type === 'ADD'){
+//         // arr.push(action.payload)
+//         return [...state,action.payload];
+//     }
+//     return arr
+//
+// }
+// console.log(reducer([4], { type: 'ADD', payload: 5 }))
 
 export default Z5;
 
