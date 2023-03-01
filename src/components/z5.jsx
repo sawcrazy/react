@@ -18,20 +18,15 @@ class Z5 extends React.Component {
 
     renderList =() =>{
 
-       let val = this.state.arr.map((item) =>{
-           return  Object.values(item)
-        })
-      return   val.map((item) => {
-         return <tr>
-              {item.map((item) => {
+       return  this.state.arr.map((item) =>{
+           return  <tr key={item.id}>{
+               Object.values(item).map((item)=>{
                    return <td>{item}</td>
-
-
-              })}
-             <td> <button onClick={() =>{this.delLine(item)}}>удалить</button> </td>
-          </tr>
+               })
+           }
+               <td> <button onClick={() =>{this.delLine(item.id)}}>удалить</button> </td>
+           </tr>
         })
-        console.log(val)
 
     }
     renderThead = () => {
@@ -42,6 +37,7 @@ class Z5 extends React.Component {
         })
 
     }
+
     render() {
 
         return (
@@ -59,7 +55,7 @@ class Z5 extends React.Component {
                     </tbody>
                 </table>
                 <div>
-                    <button onClick={this.renderList}>logi</button>
+                    <button onClick={this.logi}>logi</button>
                 </div>
 
             </div>
