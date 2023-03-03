@@ -4,11 +4,12 @@ import React from "react";
 class Z5 extends React.Component {
 
     state={
-        arr:[{ title: 'Марвел 1', year: '2001', desc: 'Описание',id: 1 },
+        arr:[{ title: 'Марвел 1', year: '2001', desc: 'Описание',id: 1,},
                 { title: 'Batman', year: '2005', desc: 'Описание' , id: 2},
                 { title: 'Марвел 5', year: '2003', desc: 'Описание', id: 3 },
 
 ],
+        input: '',
     }
     delLine = (id) =>{
         const delLine = this.state.arr.filter((item) => item.id !== id);
@@ -37,11 +38,28 @@ class Z5 extends React.Component {
         })
 
     }
+    searchText = (event) => {
+        let input = event.target.value;
+        this.setState({input: input})
+
+    }
+    search = () =>{
+        let test =  this.state.arr.filter((item) =>
+            item.title.toLowerCase()
+            .includes(this.state.input.toLowerCase()));
+        this.setState({arr: test})
+
+
+    }
 
     render() {
 
         return (
             <div>
+                <div>
+                    <input type="text" value={this.state.input} onChange={this.searchText}/>
+                    <button onClick={this.search}>Поиск</button>
+                </div>
                 <table>
                     <thead>
                     <tr>

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="05eff779-fab7-4492-b2a8-934d0c463bdc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/z5.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/z5.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,8 @@
       <workItem from="1677266395619" duration="4803000" />
       <workItem from="1677338116974" duration="5180000" />
       <workItem from="1677583204338" duration="7089000" />
-      <workItem from="1677699380540" duration="942000" />
+      <workItem from="1677699380540" duration="1875000" />
+      <workItem from="1677874061652" duration="4880000" />
     </task>
     <servers />
   </component>
