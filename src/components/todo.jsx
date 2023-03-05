@@ -16,8 +16,10 @@ class Todo extends React.Component {
         this.setState({arr:todo})
 
     }
-    deleteTodo =() =>{
-        let arr = [...this.state.arr];
+    deleteTodo =(i) =>{
+       let arr = this.state.arr.filter((item,index) => index !== i);
+
+        this.setState({arr: arr})
 
     }
     renderTodo =() =>{
@@ -28,11 +30,11 @@ class Todo extends React.Component {
                 </div>
             )
         }
-      return   this.state.arr.map((item) =>{
+      return   this.state.arr.map((item,index) =>{
             return (
                 <li>
                     {item}
-                    <button>удалить дельце</button>
+                    <button onClick={()=>{this.deleteTodo(index)}}>удалить дельце</button>
                 </li>
             )
         })
