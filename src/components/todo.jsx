@@ -11,10 +11,32 @@ class Todo extends React.Component {
             input: input
         })
     }
-    renderTodo =() =>{
-            let todo = [...this.state.arr,this.state.input];
+    addTodo =() =>{
+        let todo = [...this.state.arr,this.state.input];
         this.setState({arr:todo})
-            console.log(todo)
+
+    }
+    deleteTodo =() =>{
+        let arr = [...this.state.arr];
+
+    }
+    renderTodo =() =>{
+        if (this.state.arr.length === 0){
+            return (
+                <div>
+                    Нет дел
+                </div>
+            )
+        }
+      return   this.state.arr.map((item) =>{
+            return (
+                <li>
+                    {item}
+                    <button>удалить дельце</button>
+                </li>
+            )
+        })
+
     }
     render() {
 
@@ -22,12 +44,10 @@ class Todo extends React.Component {
             <div>
                 <h1>Ну наконец ТУДУ</h1>
                 <input type="text" value={this.state.input} onChange={this.inputValue}/>
-                <button onClick={this.renderTodo}>Добавить</button>
+                <button onClick={this.addTodo}>Добавить</button>
                 <div>
                     <ul>
-                        <li>
-
-                        </li>
+                        {this.renderTodo()}
                     </ul>
                 </div>
             </div>
