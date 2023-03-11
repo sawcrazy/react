@@ -12,14 +12,16 @@ import "./components/style.css"
 import Zadan3 from "./components/zadan3";
 import Z4 from "./components/z4";
 import Z5 from "./components/z5";
+import todoPro from "./components/todoPro";
+import TodoPro from "./components/todoPro";
 
 
 
 const App = () => {
     return (
         <div>
-            <Z5/>
-            <Todo/>
+            <TodoPro/>
+
         </div>
 
         )
