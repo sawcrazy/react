@@ -81,15 +81,69 @@ class Z5 extends React.Component {
     }
 }
 // function reducer(state,action) {
-//     let arr = [...state];
-//     if(action.type === 'ADD'){
-//         // arr.push(action.payload)
-//         return [...state,action.payload];
+//     switch(action.type){
+//         case 'ADD' :
+//             return [...state,action.payload];
+//         case 'REMOVE' :
+//             return state.filter((item) => item !== action.payload);
+//         case 'CHANGE' :
+//             return state.map((item,index) =>{
+//                 if(index === action.payload.index){
+//                     return action.payload.value
+//                 }
+//                 return item
+//
+//             })
 //     }
-//     return arr
 //
 // }
-// console.log(reducer([4], { type: 'ADD', payload: 5 }))
+let obj = {key1:'key1',key2:'key1',};
+function reducer(state,action) {
+    let clone = {...state};
+    switch (action.type){
+        case 'ADD' :
+            // clone[action.payload.key] = action.payload.value
+            return {...state,[action.payload.key]: action.payload.value};
+        case 'REMOVE' :
+            return {...state, [action.payload]: undefined}
+            // return clone
+        case 'CHANGE' :
+            if (action.payload.key in clone){
+                clone[action.payload.key] = action.payload.value
+                return clone
+            }
+
+    }
+
+}
+
+// function reducer(state,action) {
+//     // let clone = {...state};
+//     switch (action.type){
+//         case 'ADD' :
+//             state[action.payload.key] = action.payload.value
+//             return state;
+//         case 'REMOVE' :
+//             delete state[action.payload]
+//             return state
+//         case 'CHANGE' :
+//             if (action.payload.key in state){
+//                 state[action.payload.key] = action.payload.value
+//                 return state
+//             }
+//
+//     }
+//
+// }
+
+console.log(reducer(obj, { type: 'ADD', payload: { key: 'rscn', value: 2500 } }))
+
+// console.log(obj)
+// console.log(reducer(obj, { type: 'ADD', payload: { key: 'ssss', value: 35} }))
+// console.log(obj)
+console.log(reducer({key1:'key1',key2:'key2',}, { type: 'REMOVE', payload: 'key2' }))
+console.log(obj)
+// console.log(reducer({key1:'key1',key2:'key1',}, {  type: 'CHANGE', payload: { key: 'key1', value: 250 } }))
 
 export default Z5;
 

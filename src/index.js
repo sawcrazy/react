@@ -20,7 +20,7 @@ import TodoPro from "./components/todoPro";
 const App = () => {
     return (
         <div>
-            <TodoPro/>
+            <Z5/>
 
         </div>
 
