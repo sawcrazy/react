@@ -14,14 +14,15 @@ import Z4 from "./components/z4";
 import Z5 from "./components/z5";
 import todoPro from "./components/todoPro";
 import TodoPro from "./components/todoPro";
+import List from "./components/list";
+
 
 
 
 const App = () => {
     return (
         <div>
-            <Z5/>
-
+            <List/>
         </div>
 
         )
